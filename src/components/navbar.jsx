@@ -1,8 +1,9 @@
-function navbar() {
+function Navbar() {
   return (
     <div>
-      <h1>baaa3</h1>
+
+
     </div>
   )
 }
-export default navbar
+export default Navbar
