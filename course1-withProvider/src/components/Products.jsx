@@ -1,15 +1,13 @@
 
 import Counter from './Counter';
 import Produit from './Produit';
-import { useState } from "react"
+import { useState,useContext } from "react"
 import {v4 as uuid} from "uuid";
 import { ProductContext } from '../contexts/ProductsContext';
 function Products() {
-  const [products,setProducts]=useState( [
-    {id : 1 , label : 'iphone 13',price : 15200},
-    {id : 2 , label : 'ipad',price : 15860},
-    {id : 3 , label : 'samsung',price : 20000}
-  ]);
+  
+  const {products,deleteProduct}=useContext(ProductContext)
+
   let showProduct = true ;
   const[title,setTitle]=useState("")
   const[price,setPrice]=useState("")
@@ -41,19 +39,13 @@ function Products() {
         price //price:price => just price
       }
       //console.log(myproduct)
-      setProducts([myproduct,...products]) //spread operator poour l'ajout
+      //setProducts([myproduct,...products]) //spread operator poour l'ajout
       setTitle("")
       setPrice(0)
 
     }
   
-  const deleteProduct=(id)=>{
-let myList=products.filter(product =>product.id!==id)
-setProducts((prev)=>{
-  console.log(prev)
-  return myList
-})
-}
+
   return (
     <>
 
@@ -82,7 +74,7 @@ setProducts((prev)=>{
             products.map((prod,index)=>(
                 <div key={index}>
 
-               <Produit id={prod.id} onDeleteProduct={deleteProduct} >
+               <Produit id={prod.id} onDeleteProduct={()=>deleteProduct(prod.id)} >
                <div className="card-header">{prod.label}</div>
                       <div className="card-body">
                   <h4 className="card-title">{prod.label}</h4>
@@ -107,3 +99,7 @@ export default Products
 // dik produit ymkn nfskhoha plus 
 //slot kitsma freact childer
 //products ay tsupprimach khsna nrdoh state
+
+//3AYTNA LA ARROW FUNCTION FEDELETE PRODUCT MLI 3AYTNALIHA MN PROVIDER
+//KABLOKLIW , bach mkideclenchich jsx lfunction kandiroha arrow functiion , hitach ki executiha dima wakha madwzliha walo
+// f jsx , function b params darori khsna arrow func 

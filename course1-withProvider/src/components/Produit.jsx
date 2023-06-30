@@ -1,5 +1,7 @@
 //used for validattion
 import PropTypes from 'prop-types';
+import { ProductContext } from '../contexts/ProductsContext';
+import { useContext } from 'react';
 const Produit = ({children,onDeleteProduct,id}) => {
   
   return (
@@ -26,3 +28,5 @@ Produit.defaultProps = {
 //Produit.defaultProps=
 export default Produit
 // contenu lif lcard kitbdl so hna ghandwzoh as a slot fost tag
+
+//delete daba ghandiroha hna

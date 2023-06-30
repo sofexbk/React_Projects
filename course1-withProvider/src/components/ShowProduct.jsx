@@ -3,7 +3,7 @@ import { useParams,useNavigate } from "react-router-dom"
 const ShowProduct = () => {
     const navigate=useNavigate()
     const {id,slug}=useParams()
-    //console.log(id,slug)
+    console.log(id,slug)
     if(+id===404){
         return(
             <h1>Page not found!</h1>

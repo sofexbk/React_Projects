@@ -1,11 +1,27 @@
-import {createContext} from 'react'
+import {createContext,useState} from 'react'
 
 export const ProductContext=createContext()
 
 export const ProductProvider=({children})=>{
+   const [products,setProducts]=useState( [
+      {id : 1 , label : 'iphone 13',price : 15200},
+      {id : 2 , label : 'ipad',price : 15860},
+      {id : 3 , label : 'samsung',price : 20000}
+    ]);
+    const deleteProduct=(id)=>{
+      let myList=products.filter(product =>product.id!==id)
+      setProducts(myList) 
+      /*setProducts((prev)=>{
+        console.log(prev)
+        return myList
+      })*/
+      }
    return(<ProductContext.Provider value= {{
     message:"salaaaam",
-    title:"Bright crypto"
+    title:"Bright crypto",
+    products,
+    setProducts,
+    deleteProduct
     }}>
      {children}
    </ProductContext.Provider>) 
