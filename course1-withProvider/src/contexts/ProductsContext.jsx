@@ -16,12 +16,17 @@ export const ProductProvider=({children})=>{
         return myList
       })*/
       }
+
+      const addProduct=(item)=>{
+         setProducts([item,...products])
+      }
    return(<ProductContext.Provider value= {{
     message:"salaaaam",
     title:"Bright crypto",
     products,
     setProducts,
-    deleteProduct
+    deleteProduct,
+    addProduct
     }}>
      {children}
    </ProductContext.Provider>) 

@@ -14,7 +14,7 @@ function App() {
         <Navbar/>
        <Routes>  
         <Route path="/" element={<Products/>} />
-        <Route path="/produit/:id/:slug" element={<ShowProduct/>} />
+        <Route path="/produit/:id/"  element={<ShowProduct/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/contact" element={<Contact/>} />
        </Routes>
@@ -23,6 +23,9 @@ function App() {
     </>
   );
 }
+
+//:slug
+
 //khas dima  ikon wahd div mjmo3 fih kolchi
 /// wa can add fragments import fragment wla tkhali parentheisi khawyin <> </>
 // dima pascal case am3alem Navbar

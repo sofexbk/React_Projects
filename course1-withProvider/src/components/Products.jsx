@@ -6,7 +6,7 @@ import {v4 as uuid} from "uuid";
 import { ProductContext } from '../contexts/ProductsContext';
 function Products() {
   
-  const {products,deleteProduct}=useContext(ProductContext)
+  const {products,deleteProduct,addProduct}=useContext(ProductContext)
 
   let showProduct = true ;
   const[title,setTitle]=useState("")
@@ -38,6 +38,7 @@ function Products() {
         label:title,
         price //price:price => just price
       }
+      addProduct(myproduct)
       //console.log(myproduct)
       //setProducts([myproduct,...products]) //spread operator poour l'ajout
       setTitle("")

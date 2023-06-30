@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ProductContext } from '../contexts/ProductsContext';
 import { useContext } from 'react';
 const Produit = ({children,onDeleteProduct,id}) => {
-  
+  const {deleteProduct}=useContext(ProductContext)
   return (
     <> 
     <div className="my-4">
