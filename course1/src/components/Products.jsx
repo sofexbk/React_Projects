@@ -3,6 +3,7 @@ import Counter from './Counter';
 import Produit from './Produit';
 import { useState } from "react"
 import {v4 as uuid} from "uuid";
+import { ProductContext } from '../contexts/ProductsContext';
 function Products() {
   const [products,setProducts]=useState( [
     {id : 1 , label : 'iphone 13',price : 15200},

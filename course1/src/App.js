@@ -26,4 +26,7 @@ function App() {
 //khas dima  ikon wahd div mjmo3 fih kolchi
 /// wa can add fragments import fragment wla tkhali parentheisi khawyin <> </>
 // dima pascal case am3alem Navbar
+
+// n9dro nforniw gha 3la route libghaywna
+// <Route path="/" element={ <ProductProvider> <Products/>  </ProductProvider>} />
 export default App;
