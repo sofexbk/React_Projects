@@ -1,6 +1,11 @@
 import {NavLink} from "react-router-dom";
-
+import { useContext } from "react";
+import { ProductContext } from "../contexts/ProductsContext";
 function Navbar() {
+
+
+  const data=useContext(ProductContext)
+  console.log(data)
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
@@ -21,6 +26,7 @@ function Navbar() {
         </li>
         <li className="nav-item">
           <NavLink activeclassname="active" className="nav-link" to="/contact">Contact</NavLink>
+          
         </li>
       </ul>
     </div>
