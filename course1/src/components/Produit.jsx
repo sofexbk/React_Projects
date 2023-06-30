@@ -1,6 +1,7 @@
 //used for validattion
 import PropTypes from 'prop-types';
 const Produit = ({children,onDeleteProduct,id}) => {
+  
   return (
     <> 
     <div className="my-4">
@@ -18,10 +19,10 @@ Produit.propTypes={
   price:PropTypes.number.isRequired
 }
 
-/*Produit.defaultProps = {
+Produit.defaultProps = {
   label : "my product" ,
   price : 0
-} */
+} 
 //Produit.defaultProps=
 export default Produit
 // contenu lif lcard kitbdl so hna ghandwzoh as a slot fost tag
