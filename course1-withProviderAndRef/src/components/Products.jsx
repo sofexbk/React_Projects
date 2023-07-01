@@ -57,6 +57,8 @@ function Products() {
       //setProducts([myproduct,...products]) //spread operator poour l'ajout
       //setTitle("")
       //setPrice(0)
+      label:title.current.value=""
+      price:price.current.value=0
 
     }
   
@@ -84,7 +86,6 @@ function Products() {
      </div>
      <button className="btn btn-primary my-2 mb-4">SAVE</button>
     </form>
-{title}{price}
       <Counter/>
     {
         showProduct && ( 
