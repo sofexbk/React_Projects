@@ -1,0 +1,14 @@
+{
+  "articles": [
+    {
+      "title": "python",
+      "description": "django",
+      "id": 1
+    },
+    {
+      "title": "react",
+      "description": "redux",
+      "id": 2
+    }
+  ]
+}
