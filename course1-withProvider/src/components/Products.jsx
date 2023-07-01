@@ -52,8 +52,9 @@ function Products() {
 
     <form onSubmit={submitForm}>
      <div className="form-group my-2">
-      <label htmlFor="" className="form-label">Title</label>
+      <label htmlFor="" className="form-label">Title
       <input defaultValue={title} type="text" onChange={titleInput} className="form-control" />
+      </label>
       {message && (     
          <div className="alert alert-danger">
         {message}
@@ -61,8 +62,9 @@ function Products() {
      </div>
 
      <div className="form-group my-2">
-      <label htmlFor="" className="form-label">Price</label>
+      <label htmlFor="" className="form-label">Price
       <input value={price} type="number"  onChange={priceInput} className="form-control" />
+      </label>
      </div>
      <button className="btn btn-primary my-2 mb-4">SAVE</button>
     </form>
@@ -104,3 +106,8 @@ export default Products
 //3AYTNA LA ARROW FUNCTION FEDELETE PRODUCT MLI 3AYTNALIHA MN PROVIDER
 //KABLOKLIW , bach mkideclenchich jsx lfunction kandiroha arrow functiion , hitach ki executiha dima wakha madwzliha walo
 // f jsx , function b params darori khsna arrow func 
+
+
+
+
+//seRef hsen mn dik bzf d states
