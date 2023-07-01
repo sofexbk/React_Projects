@@ -84,7 +84,6 @@ function Products() {
      </div>
      <button className="btn btn-primary my-2 mb-4">SAVE</button>
     </form>
-{title}{price}
       <Counter/>
     {
         showProduct && ( 
