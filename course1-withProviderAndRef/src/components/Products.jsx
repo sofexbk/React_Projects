@@ -57,6 +57,8 @@ function Products() {
       //setProducts([myproduct,...products]) //spread operator poour l'ajout
       //setTitle("")
       //setPrice(0)
+      label:title.current.value=""
+      price:price.current.value=0
 
     }
   
