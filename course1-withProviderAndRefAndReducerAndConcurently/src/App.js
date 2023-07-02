@@ -7,11 +7,13 @@ import ShowProduct from './components/ShowProduct';
 import {ProductProvider} from "./contexts/ProductsContext"
 import  { BrowserRouter as Router ,Routes,Route} from "react-router-dom"
 import ArticleList from './components/articles/ArticleList';
+import ArticleProvider from './contexts/article/ArticleProvider';
 function App() {
   return (
     <>
     <Router>
       <ProductProvider>
+        <ArticleProvider>
         <Navbar/>
        <Routes>  
         <Route path="/" element={<Products/>} />
@@ -19,7 +21,8 @@ function App() {
         <Route path="/about" element={<About/>} />
         <Route path="/blog" element={<ArticleList/>} />
         <Route path="/contact" element={<Contact/>} />
-       </Routes>
+       </Routes>          
+        </ArticleProvider>
       </ProductProvider>
     </Router>
     </>
