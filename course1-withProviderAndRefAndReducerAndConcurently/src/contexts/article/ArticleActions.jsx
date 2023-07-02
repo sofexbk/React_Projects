@@ -1,8 +1,14 @@
 import axios from "axios";
 import Swal from "sweetalert2";
+import { articleApi } from "../../components/app/api";
+//process car 3ana variable d'envirennometn
+//mli katcrei variable d'environnment khsq redemared server
+//const api=process.env.REACT_APP_URL_API 
+
+
 export const getAllArticles= async()=> {
     try {
-        const response = await axios.get("http://localhost:4000/articles");
+        const response = await articleApi.get();
         // console.log(response.data);
           return response.data
     } catch (error) {
@@ -23,7 +29,7 @@ export const deleteArticle=(id) =>{
       }).then( async (result) => {
         try {
             if (result.isConfirmed) {
-            const response = await axios.delete(`http://localhost:4000/articles/${id}`);
+            const response = await articleApi.delete(`/${id}`);
             if (response.status ===200){
                 Swal.fire(                         
                       'Deleted!',
